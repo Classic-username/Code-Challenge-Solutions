@@ -1,3 +1,5 @@
+# Completed
+
 # https://leetcode.com/problems/find-the-duplicate-number
 
 # Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), 
@@ -24,3 +26,11 @@ class Solution:
                 new_list.append(num)
             else:
                 return num
+
+
+# Planned 
+# https://leetcode.com/problems/search-in-rotated-sorted-array/
+
+
+# Started
+# https://leetcode.com/problems/longest-substring-without-repeating-characters/
