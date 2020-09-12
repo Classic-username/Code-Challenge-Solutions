@@ -29,6 +29,8 @@ public class Kata
   }
 }
 
+Console.WriteLine
+
 // https://www.codewars.com/kata/54ba84be607a92aa900000f1/train/csharp
 
 // An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
@@ -100,9 +102,28 @@ public class DnaStrand
           return newString;
         }
     }
+    
+// https://www.codewars.com/kata/55b42574ff091733d900002f/train/csharp
+
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+// i.e.
+
+// friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+
+using System;
+using System.Collections.Generic;
+
+public static class Kata {
+  public static IEnumerable<string> FriendOrFoe (string[] names) {
+    // Good luck!
+  }
+}
 
 // Started
-
-
 
 // Planned
