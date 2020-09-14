@@ -45,7 +45,6 @@ public class Kata
 {
   public static bool IsIsogram(string str) 
   {
-    // Code on you crazy diamond!
     if(str == null){
       return true;
     } else {
@@ -118,7 +117,15 @@ using System.Collections.Generic;
 
 public static class Kata {
   public static IEnumerable<string> FriendOrFoe (string[] names) {
-    // Good luck!
+    var friendList = new List<string>();
+    foreach(string friend in names)
+    {
+      if(friend.Length == 4)
+      {
+        friendList.Add(friend);
+      }
+    }
+    return friendList;
   }
 }
 
@@ -138,7 +145,6 @@ public class Kata
     var eList = new List<string>();
     var sList = new List<string>();
     var wList = new List<string>();
-    
     if(walk.Length == 10)
     {
       foreach(string direction in walk)
@@ -164,7 +170,6 @@ public class Kata
       {
         return false;
       }
-      
     } else {
       return false;
     }
