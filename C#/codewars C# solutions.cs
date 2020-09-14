@@ -29,7 +29,6 @@ public class Kata
   }
 }
 
-Console.WriteLine
 
 // https://www.codewars.com/kata/54ba84be607a92aa900000f1/train/csharp
 
@@ -82,7 +81,6 @@ public class DnaStrand
     {
         public static string MakeComplement(string dna)
         {
-            //Your code
           var newString = "";
           foreach(var letter in dna){
             if(letter == 'A')
@@ -123,6 +121,55 @@ public static class Kata {
     // Good luck!
   }
 }
+
+// https://www.codewars.com/kata/54da539698b8a2ad76000228/train/csharp
+
+// You live in the city of Cartesia where all roads are laid out in a perfect grid. You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk. The city provides its citizens with a Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']). You always walk only a single block for each letter (direction) and you know it takes you one minute to traverse one city block, so create a function that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
+
+// Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
+
+using System.Collections.Generic;
+
+public class Kata
+{
+  public static bool IsValidWalk(string[] walk)
+  {
+    var nList = new List<string>();
+    var eList = new List<string>();
+    var sList = new List<string>();
+    var wList = new List<string>();
+    
+    if(walk.Length == 10)
+    {
+      foreach(string direction in walk)
+      {
+        if(direction == "n")
+        {
+          nList.Add(direction);
+        } else if(direction == "e")
+        {
+          eList.Add(direction);
+        } else if(direction == "s")
+        {
+          sList.Add(direction);
+        } else
+        {
+          eList.Add(direction);
+        }
+      }
+      if(nList.Count == sList.Count && eList.Count == wList.Count)
+      {
+        return true;
+      } else 
+      {
+        return false;
+      }
+      
+    } else {
+      return false;
+    }
+  }
+} // this was failing two tests but I couldn't see the inputs or outputs to resolve and couldn't think of a reason it was failing
 
 // Started
 
