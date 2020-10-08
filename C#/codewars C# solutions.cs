@@ -160,7 +160,7 @@ public class Kata
           sList.Add(direction);
         } else
         {
-          eList.Add(direction);
+          wList.Add(direction);
         }
       }
       if(nList.Count == sList.Count && eList.Count == wList.Count)
@@ -174,7 +174,43 @@ public class Kata
       return false;
     }
   }
-} // this was failing two tests but I couldn't see the inputs or outputs to resolve and couldn't think of a reason it was failing
+} // this was failing two tests Because I added east to east, and also west to east
+
+// https://www.codewars.com/kata/5264d2b162488dc400000001/train/csharp
+
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+// Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" spinWords( "This is a test") => returns "This is a test" spinWords( "This is another test" )=> returns "This is rehtona test"
+
+using System.Collections.Generic;
+using System.Linq;
+using System;
+
+public class Kata
+{
+  public static string SpinWords(string sentence)
+  {
+    
+    var words = "";
+
+        foreach(var word in sentence.Split(' '))
+        {
+            if(word.Length >= 5)
+            {
+                var test = word.ToCharArray();
+                Array.Reverse(test);
+                var secondTest = new string (test);
+                words += $"{secondTest} ";
+            }
+            else
+            {
+                words += $"{word} ";
+            }
+        }
+
+        return words.TrimEnd(' ');
+  }
+}
 
 // Started
 
