@@ -212,6 +212,34 @@ public class Kata
   }
 }
 
+// https://www.codewars.com/kata/54da5a58ea159efa38000836/train/csharp
+
+// Given an array of integers, find the one that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+using System.Linq;
+
+namespace Solution
+{
+  class Kata
+    {
+    public static int find_it(int[] seq) 
+      {
+            int result = 0;
+            foreach(var num in seq)
+            {
+                if(seq.Count(x => x == num) % 2 != 0)
+                {
+                    result = num;
+                }
+            }
+            return result;
+        }
+       
+    }
+}
+
 // https://www.codewars.com/kata/5544c7a5cb454edb3c000047/train/csharp
 
 // A child is playing with a ball on the nth floor of a tall building. The height of this floor, h, is known.
