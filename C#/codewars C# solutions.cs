@@ -311,6 +311,31 @@ public static class Kata
 
 // could consider string.Equals(stringToEqual, parameterForComparison)
 
+// https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad/train/csharp
+
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+using System.Linq;
+using System.Collections.Generic;
+
+namespace Solution
+{
+  public static class ArraysInversion
+  {
+    public static int[] InvertValues(int[] input)
+    {
+        var newArr = new List<int>();
+        foreach(int num in input)
+        {
+                newArr.Add(num * -1);
+        }
+        return newArr.ToArray();
+    }
+  }
+}
+
+
+
 // Started
 
 // https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/csharp
@@ -335,3 +360,5 @@ public static class Kata
 }
 
 // Planned
+
+// https://www.codewars.com/kata/550f22f4d758534c1100025a/csharp
