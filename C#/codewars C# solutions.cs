@@ -370,6 +370,31 @@ public static class Kata
   }
 }
 
+// https://www.codewars.com/kata/526233aefd4764272800036f/train/csharp
+
+// Write a function that accepts two square matrices (N x N two dimensional arrays), and return the sum of the two. Both matrices being passed into the function will be of size N x N (square), containing only integers.
+
+// How to sum two matrices:
+
+// Take each cell [n][m] from the first matrix, and add it with the same [n][m] cell from the second matrix. This will be cell [n][m] of the solution matrix.
+
+public class Kata
+{
+  public static int[][] MatrixAddition(int[][] a, int[][] b)
+  {
+        var array = new int[a.Length][];
+        array = a;
+        for(int i = 0; i < a.Length; i++)
+        {
+            for(int x = 0; x < a.Length; x++)
+            {
+                array[i][x] = a[i][x] + b[i][x];
+            }
+        }
+        return array;
+    }
+}
+
 // Started
 
 // https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/csharp
