@@ -277,6 +277,61 @@ public class BouncingBall {
 	}
 }
 
+// https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/csharp
+
+// A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+// Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+using System;
+using System.Collections.Generic;
+
+using System;
+using System.Collections.Generic;
+
+public static class Kata
+{
+  public static bool IsPangram(string str)
+  {
+            bool assumeInnocent = true;
+            str = str.ToUpper();
+            var charString = new List<char>() {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+
+            foreach(char character in charString)
+            {
+                if (!str.Contains(character))
+                {
+                    assumeInnocent = false;
+                }
+            }
+
+            return assumeInnocent;
+        }
+}
+
+// could consider string.Equals(stringToEqual, parameterForComparison)
+
 // Started
+
+// https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/csharp
+
+using System;
+
+public static class Kata
+{
+  public string Order(string words)
+  {
+    
+    if(words.Length == 0)
+    {
+      return "";
+    } 
+    else 
+    {
+      
+    }
+    throw new NotImplementedException("Your mom eats glue");
+  }
+}
 
 // Planned
