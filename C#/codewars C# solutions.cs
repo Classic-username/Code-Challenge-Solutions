@@ -395,6 +395,32 @@ public class Kata
     }
 }
 
+// https://www.codewars.com/kata/582cb0224e56e068d800003c/train/csharp
+
+// Nathan loves cycling.
+
+// Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+
+// You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+
+// For example:
+
+// time = 3 ----> litres = 1
+
+// time = 6.7---> litres = 3
+
+// time = 11.8--> litres = 5
+
+using System;
+
+public class Kata
+{
+  public static int Litres(double time)
+  {
+    return (int)(Math.Floor(time/2));
+  }
+}
+
 // Started
 
 // https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/csharp
@@ -421,3 +447,45 @@ public static class Kata
 // Planned
 
 // https://www.codewars.com/kata/550f22f4d758534c1100025a/csharp
+
+
+// So close
+
+// https://www.codewars.com/kata/5b5e0c0d83d64866bc00001d/train/csharp
+
+// using System.Linq;
+// using System.Collections.Generic;
+
+// public class Kata
+// {
+//       public static string sayMeOperations(string  stringNumbers)
+//       {
+
+//             var strList = new List<string>();
+
+
+//             while(stringNumbers.Length >= 3)
+//             {
+//                 if(stringNumbers[stringNumbers.Length - 1] == stringNumbers[stringNumbers.Length - 2] + stringNumbers[stringNumbers.Length - 3])
+//                 {
+//                     stringNumbers = stringNumbers.Substring(0, stringNumbers.Length - 2);
+//                     strList.Prepend("addition, ");
+//                 }
+//                 else if (stringNumbers[stringNumbers.Length - 1] == stringNumbers[stringNumbers.Length - 2] - stringNumbers[stringNumbers.Length - 3])
+//                 {
+//                     stringNumbers = stringNumbers.Substring(0, stringNumbers.Length - 2);
+//                     strList.Prepend("subtraction, ");
+//                 }
+//                 else if (stringNumbers[stringNumbers.Length - 1] == stringNumbers[stringNumbers.Length - 2] * stringNumbers[stringNumbers.Length - 3])
+//                 {
+//                     stringNumbers = stringNumbers.Substring(0, stringNumbers.Length - 2);
+//                     strList.Prepend("multiplication, ");
+//                 } else if (stringNumbers[stringNumbers.Length - 1] == stringNumbers[stringNumbers.Length - 2] / stringNumbers[stringNumbers.Length - 3])
+//                 {
+//                     stringNumbers = stringNumbers.Substring(0, stringNumbers.Length - 2);
+//                     strList.Prepend("division, ");
+//                 }
+//             }
+//             return strList.ToString();
+//         }
+// }
